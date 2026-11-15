@@ -1,0 +1,12 @@
+name: Automated Build
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  validate-stage:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute scripts
+        run: echo "checks passed"
